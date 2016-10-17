@@ -1,0 +1,52 @@
+h1 {
+  font-family: Tahoma, Geneva, sans-serif;
+  color: white;
+  text-align: center;
+  margin-right: 150px;
+  margin-left: 150px;
+}
+body {
+  background-color: powderblue;
+}
+div.response {
+  border-radius: 25px;
+  border: 10px solid navy;
+  padding: 30px;
+  margin-right: 200px;
+  margin-left: 200px;
+  font-family: Tahoma, Geneva, sans-serif;
+  color: navy;
+  text-align: center;
+  vertical-align: text-top;
+  background-color: lightgrey;
+}
+div.new_question {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 20px;
+  color: navy;
+  text-align: center;
+
+}
+input[type=submit] {
+  outline: none;
+  width: 10%;
+  border-radius: 30px;
+  border: 5px solid lightgreen;
+  padding: 5px;
+  background-color: white;
+  color: navy;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+div.response_footer{
+  font-family: Tahoma, Geneva, sans-serif;
+  position: fixed;
+  bottom: 1;
+  right: 0;
+  width: 200px;
+}
+p {
+  font-size: 20px;
+  font-weight: bold;
+}
