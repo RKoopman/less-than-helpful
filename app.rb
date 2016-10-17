@@ -7,7 +7,7 @@ class Less_Than_Helpful < Sinatra::Base
   end
 
   post '/results' do
-    num = 1
+    num = rand(1..7) #4, 5, & 7 will get stuck on the results page. Change this to a specific num vanlue to see the intended response page.
     if num == 1 # time
       result = TimeOfDay.new
       @final_phrase = "The time is currently:"
