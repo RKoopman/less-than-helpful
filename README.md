@@ -1,5 +1,5 @@
-# less_than_helpful
+Less Than Helpful:
 
-Issues:
-1) Calling an image from an image file and not rendering the image as the whole page.
-2) Linking external style-sheets to erb files
+Super simple two page Sinatra app that mimics a search engine, but doesn't actually search anything. Shows user a random result regardless of what they ask for. Give it a shot, and see what you get! Could be some fun facts, an inspiring quote, or an image or a totally rad sports car!
+
+Feel free to click the link and email me through my site. 
