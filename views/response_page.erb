@@ -60,6 +60,12 @@
         font-size: 20px;
         font-weight: bold;
       }
+      img {
+        width: 500px;
+        height: auto;
+        border-radius: 25px;
+        border: 5px solid navy;
+      }
       </style>
       <meta charset="UTF-8">
     <title>title</title>
@@ -69,7 +75,14 @@
     <div class="response">
       <p><%= @final_phrase %></p>
       <br>
-      <%= @final_result %>
+      <%= @final_result %><br>
+      <%if @test == "CorvImage"%>
+        <img src="images/1953_chevrolet_corvette.jpg" alt="">
+      <%elsif @test == "BMWImage"%>
+        <img src="images/BMW-507-Roadster.jpg" alt="">
+      <%elsif @test == "RobbinsQuote"%>
+        <img src="images/tony_rob_quote.jpg" alt="">
+      <%end%>
     </div>
     <br>
     <div class="new_question">

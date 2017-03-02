@@ -15,6 +15,11 @@
     h2 {
       color: navy;
     }
+    h5 {
+      font-family: Tahoma, Geneva, sans-serif;
+      color: navy;
+      text-align: center;
+    }
     div.form {
       border-radius: 25px;
       border: 10px solid navy;
@@ -33,7 +38,7 @@
     }
     input[type=text] {
       outline: none;
-      width: 13.5%;
+      width: 14%;
       border-radius: 25px;
       border: 5px solid lightblue;
       padding: 10px;
@@ -48,7 +53,7 @@
     }
     input[type=submit] {
       outline: none;
-      width: 13.5%;
+      width: 14%;
       border-radius: 25px;
       border: 5px solid lightgreen;
       padding: 10px;
@@ -73,7 +78,7 @@
     <h1>I'm here to put forth my best efforts to assist you in your search for knowledge and truth.</h1>
         <br>
       <div class="form">
-        <form method="POST" action="/results">
+        <form method="GET" action="/results">
           <h2>What may I help you with today?</h2>
           <br>
           <div class="user_input">
@@ -82,5 +87,7 @@
           </div>
         </form>
       </div>
+      <h5>Built by <a href="http://www.raoulkoopman.com" class="site-link" target="_blank">Raoul Koopman</a>
+</h5>
   </body>
 </html>

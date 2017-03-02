@@ -2,12 +2,13 @@ require 'sinatra/base'
 
 
 class Less_Than_Helpful < Sinatra::Base
+
   get '/' do
     erb :question_page
   end
 
-  post '/results' do
-    num = rand(1..7) #4, 5, & 7 will get stuck on the results page. Change this to a specific num vanlue to see the intended response page.
+  get '/results' do
+    num = rand(1..10)
     if num == 1 # time
       result = TimeOfDay.new
       @final_phrase = "The time is currently:"
@@ -20,13 +21,13 @@ class Less_Than_Helpful < Sinatra::Base
       result = BergenTime.new
       @final_result = result.current_time
     elsif num == 4 # image of corvette
-      @final_phrase = "Here's the picture of the '53 Corvette you asked for. And if you don't mind my two cents; I think it'd be a worthwhile investment. Yup definitely a sound investment."
-      result = send_file 'public/images/1953_chevrolet_corvette.jpg', :type => :jpg, :disposition => 'inline'
-      @final_result = result
+      @final_phrase = "Here's the picture of the '53 Corvette you asked for. If you don't mind my two cents; I think it'd be a worthwhile investment."
+      @test = "CorvImage"
+      # @final_result = "CorImage"
     elsif num == 5 # image of BMW-507
-      result = send_file 'public/images/BMW-507-Roadster.jpg', :type => :jpg
       @final_phrase = "Last time a BMW 507 Roadster was sold, it was for about $1 million. VERY sound investment. Do it."
-      @final_result = result
+      @test = "BMWImage"
+      # @final_result = "BMWImage"
     elsif num == 6 # random motivational quote
       index = rand(0..4)
       @final_phrase = "Here's a quote that's helped me through some tough times:"
@@ -37,7 +38,17 @@ class Less_Than_Helpful < Sinatra::Base
                     "'Anything you can do, I can do better.' - Mia Hamm & Michael Jordan, Gatorade Commercial"]
       @final_result = quotes_ary[index]
     elsif num == 7 # image of tony_rob quote
-      @final_result = send_file 'public/images/tony_rob_quote.jpg', :type => :jpg
+      @final_result = "Time to be inspired!"
+      @test = "RobbinsQuote"
+    elsif num == 8
+      @final_phrase = "FUN FACT!!"
+      @final_result = "In 1916, the German Empire allowed citizens to take passport photos with their dogs."
+    elsif num == 9
+      @final_phrase = "FUN FACT!!"
+      @final_result = "Sharks are immune to cancer."
+    elsif num == 10
+      @final_phrase = "Good Quote, coming your way"
+      @final_result = "“Good judgment comes from experience, and a lot of that comes from bad judgment.” - Will Rogers"
     end
     erb :response_page
   end
